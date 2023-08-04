@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% block head %}
+
+<title>Category</title>
+
+
+{% endblock %} {% block body %}
+
+<div class="container cateCon">
+    <div class="container" style="border: solid blue;">
+        <p>
+            <h3>General</h3>
+        </p>
+        <div class="container-fluid m-0" style="border: solid red;">
+            <div class="row">
+                <div class="col">
+                    <a href="{{ url_for('intro') }}" style="color: black;">
+                        <h5>Introduction</h5>
+                    </a>
+                    <small>New to our forum? Introduce yourselves here!!</small>
+                </div>
+                <div class="col">
+
+                </div>
+
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <a href="{{ url_for('gtc') }}" style="color: black;">
+                        <h5>Games, Computers & Tech Support</h5>
+                    </a>
+                    <small>Discuss visual novels and other video games, or ask our community a computer related question.</small>
+
+                </div>
+                <div class="col">
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+{% endblock %}

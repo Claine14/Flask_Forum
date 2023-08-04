@@ -1,0 +1,71 @@
+h4 {
+    color: #919191;
+}
+
+#header-container {
+    border-bottom: none;
+    border-color: #919191;
+}
+
+#card {
+    border: none;
+    border-radius: 5;
+    border-left-width: 6px;
+    vertical-align: top;
+    border-top: solid 2px #e9e9e9;
+}
+#card:hover{
+    border: gray solid 1.5px
+}
+#card-css {
+    border: none;
+}
+
+#user-thumbnail {
+    border: none!important;
+}
+
+.button-link {
+    color: white;
+    text-decoration: none;
+}
+
+.button-link:hover {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.searchbar{
+    width: 50vw;
+}
+body{
+    overflow-x: hidden;
+}
+.bg {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+  }
+  
+.bg::after {
+    content: "";
+    background: url(../img/bg_overlay.jpg);
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
+  }

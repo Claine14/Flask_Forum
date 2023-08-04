@@ -1,0 +1,90 @@
+{% extends 'base.html' %} {% block head %}
+<title>Forum</title>
+{% endblock %} {% block body %}
+
+
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col md-8 sm-12 lg-4">
+                <!-- Left content -->
+                <div class="container p-0" id="container-forum">
+                    <div class="row">
+                        <div class="col mb-2" id="header-container">
+                            <h4 class="topic" style="float: right;">Topic</h4>
+                            <h4 class="newest-forum">Newest Forum</h4>
+                        </div>
+                        {% for id, title, body, username, users_id in forum %}
+                        <div class="row">
+
+                            <!-- Content of the forum/thread -->
+                            <div class="col">
+                                <div class="card row " id="card">
+                                    <div class="card-body col">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h5 class="card-title">
+                                                    <a href="{{ url_for('read', id=id) }}" style="color: black;">{{title}}</a>
+                                                </h5>
+                                                <p class="card-text">{{body}}</p>
+                                            </div>
+                                            <div class="col">
+                                                <small><b>Owner: </b>{{ username }}</small> {% if session and session.get('name') == username %}
+                                                <a href="#" class="button-delete plain-btn"><u>Delete</u></a>
+                                                <a href="#" class="button-edit plain-btn"><u>Edit</u></a>
+                                                <br><br><br>
+                                                <footer class="blockquote-footer"></footer>
+                                                {% endif %}
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-1">
+                                <!-- TOTAL Thread -->
+                                <h4>{{likes}}</h4>
+
+
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <!-- Right Content -->
+            <div class="col md-4 sm-12 lg-4">
+                <div class="container p-0 mb-2 ">
+                    <h4 class="latest">Latest</h4>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card" id="card-css">
+                                <!-- User image  -->
+                                <img class="img-thumbnail" src=".../100px180/?text=Image cap" alt="User Image" id="user-thumbnail">
+                                <!-- Submited new topic to talk -->
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorem Ipsum</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+</article>
+
+
+
+{% endblock %}

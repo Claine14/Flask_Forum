@@ -1,0 +1,14 @@
+.comment-button{
+    color: gray;
+}
+.comment-button:hover{
+    background-color: lightgray;
+    color: gray;
+}
+.plain-btn{
+    color: rgb(194, 194, 194);
+    font-size: 0.8rem;
+}
+.plain-btn:hover{
+    color: rgb(174, 174, 174);
+}

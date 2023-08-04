@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block head %}
+<title>Introduction - Forum</title> {% endblock %} {% block body %}
+
+<div class="container">
+    <button><a href="{{ url_for('create_intro') }}" style="color: black;">Create New Post</a></button>
+
+</div>
+{% for users_id,title,body, id in intro %}
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Replies</th>
+                <th>Profile</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="{{ url_for('view_intro',id=id, title=title ) }}" style="color: black;">{{ title }}</a></td>
+                <td>{{ body }}</td>
+                <td></td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>
+{% endfor %} {% endblock %}

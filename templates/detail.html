@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block head %}
+<title>{{ post[0] }}</title> {% endblock %} {% block body %}
+
+<div class="container mt-5">
+    <div class="row">
+        <h2>
+            {{ post[0] }}
+        </h2>
+        <h3>{{ post[1] }}</h3>
+        <p>Created by: {{ post[2] }}</p>
+        <a href="{{ url_for('comment', id=id,username=post) }}" class="comment-button"><i
+                class="fa-solpost fa-comment-dots"></i>&nbsp;Comment</a>
+
+
+        {% for comment in comments%}
+        <div class="container-sm">
+
+            <h5>{{ comment[1] }}</h5>
+            <span>by {{ comment[0] }}<span>
+
+        </div>
+        {% endfor %}
+
+
+
+    </div>
+
+</div>
+
+{% endblock %}

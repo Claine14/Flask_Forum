@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block head %} {% for title,id in post %}
+
+<title>{{title}}</title>
+
+{% endfor %} {% endblock %} {% block body %} {% for title,id in post %}
+<div class="container">
+    <h2>{{title}}</h2>
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <th></th>
+            </tr>
+        </thead>
+
+    </table>
+
+</div>
+
+<!-- Username -->
+{% if session and session.get('name') %}
+<div class="container">
+    <p>{{session['name']}}</p>
+
+
+</div>
+{% endif %} {% endfor %} {% endblock %}

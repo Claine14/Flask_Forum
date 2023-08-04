@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(219, 219, 219);
+}
+.cateCon{
+    box-shadow: rgba(0, 0, 0, 0.194) 0px 5px 0px 0px;
+}
+nav-item{
+    padding-right: 10px;
+}
